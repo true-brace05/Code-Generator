@@ -1,0 +1,42 @@
+{
+  "palindrome": {
+    "python": "def is_palindrome(s):\n    return s == s[::-1]\n\nprint(is_palindrome('radar'))",
+    "javascript": "const isPalindrome = s => s === s.split('').reverse().join('');\nconsole.log(isPalindrome('radar'));"
+  },
+  "fibonacci": {
+    "python": "def fib(n):\n    a, b = 0, 1\n    for _ in range(n):\n        yield a\n        a, b = b, a + b\n\nprint(list(fib(10)))",
+    "javascript": "function fib(n) {\n    let res = [0, 1];\n    for (let i = 2; i < n; i++) res[i] = res[i-1] + res[i-2];\n    return res;\n}\nconsole.log(fib(10));"
+  },
+  "factorial": {
+    "python": "def factorial(n):\n    return 1 if n == 0 else n * factorial(n-1)\n\nprint(factorial(5))",
+    "javascript": "const factorial = n => n === 0 ? 1 : n * factorial(n - 1);\nconsole.log(factorial(5));"
+  },
+  "bubble sort": {
+    "python": "def bubble_sort(arr):\n    n = len(arr)\n    for i in range(n):\n        for j in range(0, n-i-1):\n            if arr[j] > arr[j+1]:\n                arr[j], arr[j+1] = arr[j+1], arr[j]\n    return arr\n\nprint(bubble_sort([64, 34, 25, 12, 22]))",
+    "javascript": "function bubbleSort(arr) {\n    for (let i = 0; i < arr.length; i++) {\n        for (let j = 0; j < arr.length - i - 1; j++) {\n            if (arr[j] > arr[j+1]) [arr[j], arr[j+1]] = [arr[j+1], arr[j]];\n        }\n    }\n    return arr;\n}\nconsole.log(bubbleSort([64, 34, 25, 12, 22]));"
+  },
+  "prime check": {
+    "python": "def is_prime(n):\n    if n < 2: return False\n    for i in range(2, int(n**0.5) + 1):\n        if n % i == 0: return False\n    return True\n\nprint(is_prime(17))",
+    "javascript": "function isPrime(n) {\n    if (n < 2) return false;\n    for (let i = 2; i <= Math.sqrt(n); i++) {\n        if (n % i === 0) return false;\n    }\n    return true;\n}\nconsole.log(isPrime(17));"
+  },
+  "reverse string": {
+    "python": "text = 'Hello World'\nprint(text[::-1])",
+    "javascript": "let text = 'Hello World';\nconsole.log(text.split('').reverse().join(''));"
+  },
+  "binary search": {
+    "python": "def binary_search(arr, x):\n    low, high = 0, len(arr) - 1\n    while low <= high:\n        mid = (high + low) // 2\n        if arr[mid] < x: low = mid + 1\n        elif arr[mid] > x: high = mid - 1\n        else: return mid\n    return -1",
+    "javascript": "function binarySearch(arr, x) {\n    let low = 0, high = arr.length - 1;\n    while (low <= high) {\n        let mid = Math.floor((low + high) / 2);\n        if (arr[mid] < x) low = mid + 1;\n        else if (arr[mid] > x) high = mid - 1;\n        else return mid;\n    }\n    return -1;\n}"
+  },
+  "vowel counter": {
+    "python": "def count_vowels(s):\n    return sum(1 for char in s.lower() if char in 'aeiou')\n\nprint(count_vowels('Aman'))",
+    "javascript": "const countVowels = s => s.match(/[aeiou]/gi).length;\nconsole.log(countVowels('Aman'));"
+  },
+  "random password": {
+    "python": "import random, string\ndef gen_pass(length=8):\n    chars = string.ascii_letters + string.digits\n    return ''.join(random.choice(chars) for _ in range(length))\n\nprint(gen_pass())",
+    "javascript": "function genPass(len = 8) {\n    let chars = 'abcdefghijklmnopqrstuvwxyz0123456789';\n    return Array(len).fill(0).map(x => chars[Math.floor(Math.random() * chars.length)]).join('');\n}\nconsole.log(genPass());"
+  },
+  "list to dictionary": {
+    "python": "keys = ['name', 'age']\nvals = ['Alice', 25]\nres = dict(zip(keys, vals))\nprint(res)",
+    "javascript": "let keys = ['name', 'age'];\nlet vals = ['Alice', 25];\nlet res = Object.fromEntries(keys.map((k, i) => [k, vals[i]]));\nconsole.log(res);"
+  }
+}

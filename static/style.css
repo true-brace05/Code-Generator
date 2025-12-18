@@ -1,0 +1,52 @@
+/* General Page Styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* cite: 5 */
+    background-color: #f4f7f6; /* cite: 5 */
+    margin: 0; /* cite: 5 */
+    padding: 20px; /* cite: 5 */
+    display: flex; /* cite: 5 */
+    flex-direction: column; /* cite: 5 */
+    align-items: center; /* cite: 5 */
+}
+
+/* Header Styling */
+h1 {
+    color: #333; /* cite: 5 */
+    margin-bottom: 20px; /* cite: 5 */
+}
+
+/* Form Container */
+form {
+    background: #ffffff; /* cite: 5 */
+    padding: 30px; /* cite: 5 */
+    border-radius: 8px; /* cite: 5 */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* cite: 5 */
+    width: 100%; /* cite: 5 */
+    max-width: 500px; /* cite: 5 */
+}
+
+/* Input and Select Fields */
+input[type="text"], select {
+    width: 100%; /* cite: 5 */
+    padding: 12px; /* cite: 5 */
+    margin: 10px 0 20px 0; /* cite: 5 */
+    border: 1px solid #ccc; /* cite: 5 */
+    border-radius: 4px; /* cite: 5 */
+    box-sizing: border-box; /* cite: 5 */
+}
+
+/* Generate Button */
+button {
+    background-color: #4CAF50; /* cite: 5 */
+    color: white; /* cite: 5 */
+    padding: 14px 20px; /* cite: 5 */
+    border: none; /* cite: 5 */
+    border-radius: 4px; /* cite: 5 */
+    cursor: pointer; /* cite: 5 */
+    width: 100%; /* cite: 5 */
+    font-size: 16px; /* cite: 5 */
+}
+
+button:hover {
+    background-color: #45a049; /* cite: 5 */
+}
